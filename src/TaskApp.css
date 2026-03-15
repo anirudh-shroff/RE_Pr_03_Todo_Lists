@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-/* ── Design tokens ─────────────────────────────────────────── */
 :root {
   --cream:        #fdf8f0;
   --cream-dark:   #f5ede0;
@@ -11,7 +10,7 @@
   --rule:         #e8dfd2;
   --rule-strong:  #c9bfb2;
 
-  --accent:       #c0522a;        /* terracotta */
+  --accent:       #c0522a;        
   --accent-hover: #a0421f;
   --accent-light: #fdf0eb;
 
@@ -38,10 +37,8 @@
   --font-body:    'DM Sans', system-ui, sans-serif;
 }
 
-/* ── Reset ─────────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ── Base ──────────────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
 
 body {
@@ -65,7 +62,6 @@ body {
 
 body.swal2-shown { overflow-y: auto !important; }
 
-/* ── Page wrapper ──────────────────────────────────────────── */
 .app-wrapper {
   max-width: 820px;
   margin: 0 auto;
@@ -74,7 +70,6 @@ body.swal2-shown { overflow-y: auto !important; }
   gap: clamp(1.25rem, 3vw, 2rem);
 }
 
-/* ── Banner ────────────────────────────────────────────────── */
 .app-banner {
   text-align: center;
   padding: clamp(1.5rem, 4vw, 2.5rem) 1rem clamp(1rem, 3vw, 1.5rem);
@@ -117,7 +112,6 @@ body.swal2-shown { overflow-y: auto !important; }
   border-radius: var(--radius-pill);
 }
 
-/* ── Note form ─────────────────────────────────────────────── */
 .note-form {
   background: var(--paper);
   border: 1px solid var(--rule-strong);
@@ -190,7 +184,6 @@ select {
   padding-right: 2.2rem;
 }
 
-/* ── Submit button ─────────────────────────────────────────── */
 .submit-btn {
   font-family: var(--font-body);
   font-size: .9rem;
@@ -217,14 +210,12 @@ select {
 
 .submit-btn:active { transform: translateY(0); }
 
-/* ── Note board ────────────────────────────────────────────── */
 .note-board {
   display: flex;
   flex-direction: column;
   gap: .85rem;
 }
 
-/* ── Note card ─────────────────────────────────────────────── */
 .note-card {
   background: var(--paper);
   border: 1px solid var(--rule-strong);
@@ -242,7 +233,6 @@ select {
   box-shadow: var(--shadow-lift);
 }
 
-/* left stripe */
 .note-card__stripe {
   width: 5px;
   flex-shrink: 0;
@@ -253,7 +243,6 @@ select {
 .stripe--medium { background: var(--hi-amber); }
 .stripe--low    { background: var(--hi-green); }
 
-/* body */
 .note-card__body {
   flex: 1;
   padding: clamp(.85rem, 2.5vw, 1.25rem);
@@ -283,7 +272,6 @@ select {
   line-height: 1.55;
 }
 
-/* ── Priority badge ────────────────────────────────────────── */
 .priority-badge {
   display: inline-flex;
   align-items: center;
@@ -302,7 +290,6 @@ select {
 .badge--medium { background: var(--badge-amber-bg); color: var(--hi-amber); border-color: var(--badge-amber-bdr); }
 .badge--low    { background: var(--badge-green-bg); color: var(--hi-green); border-color: var(--badge-green-bdr); }
 
-/* ── Icon buttons ──────────────────────────────────────────── */
 .note-card__actions {
   display: flex;
   flex-direction: column;
@@ -350,7 +337,6 @@ select {
   box-shadow: 0 4px 12px rgba(192,82,42,.25);
 }
 
-/* ── Empty state ───────────────────────────────────────────── */
 .empty-board {
   background: var(--paper);
   border: 2px dashed var(--rule-strong);
@@ -376,7 +362,6 @@ select {
   font-size: clamp(.8rem, 2vw, .9rem);
 }
 
-/* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .note-form {
     grid-template-columns: 1fr;
@@ -401,7 +386,6 @@ select {
   }
 }
 
-/* ── SweetAlert overrides ──────────────────────────────────── */
 .swal2-container {
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
@@ -419,7 +403,6 @@ select {
   border-radius: var(--radius-sm) !important;
 }
 
-/* ── Keyframes ─────────────────────────────────────────────── */
 @keyframes slide-in {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
